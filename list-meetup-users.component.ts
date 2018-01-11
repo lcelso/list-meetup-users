@@ -14,7 +14,6 @@ export class ListMeetupUsersComponent implements OnInit {
   item;
 
   ngOnInit() {
-    console.log(this.data);
   }
 
   openModal(img) {
