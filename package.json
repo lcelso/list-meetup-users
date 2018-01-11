@@ -1,0 +1,8 @@
+{
+  "name": "list-meetup-users",
+  "description": "Lista de usuários do meetup",
+  "readmeFilename": "README.md",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false
+}
