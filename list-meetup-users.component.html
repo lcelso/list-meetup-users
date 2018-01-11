@@ -1,11 +1,4 @@
-<a target="_blank" href="{{ item.link }}" *ngFor="let item of data" style="    float: left;
-background: #F1AE2F;
--webkit-box-shadow: 0px 10px 24px -1px rgba(0,0,0,0.47);
--moz-box-shadow: 0px 10px 24px -1px rgba(0,0,0,0.47);
-box-shadow: 0px 10px 24px -1px rgba(0,0,0,0.47);
-color: #000;
-text-decoration: none;
-padding: 10px; width: 14%; margin: 0 4% 5% 0; height: auto">
+<a target="_blank" href="{{ item.link }}" *ngFor="let item of data" class="thumb">
   <p>Nome: {{item.name}}</p>
   <img src="{{ item.photo.photo_link }}" alt="{{item.name}}" />
 </a>
