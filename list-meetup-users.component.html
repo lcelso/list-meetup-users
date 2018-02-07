@@ -1,6 +1,6 @@
 <div *ngFor="let item of data" class="thumb">
   <p>Nome: {{item.name}}</p>
-  <img src="{{ item.photo.photo_link }}" alt="{{item.name}}" (click)="openModal(item)">
+  <img src="{{ item.photo.photo_link }}" class="picture" alt="{{item.name}}" (click)="openModal(item)">
 </div>
 
 <div *ngIf="modalIsOpen === true" class="modal" (click)="modalIsOpen = false">
