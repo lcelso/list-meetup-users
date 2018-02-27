@@ -1,18 +1,17 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-meetup-users',
   templateUrl: './list-meetup-users.component.html',
   styleUrls: ['./list-meetup-users.component.scss']
 })
-export class ListMeetupUsersComponent implements OnInit {
+export class ListMeetupUsersComponent {
 
   @Input() data;
-  value;
-  open = false;
 
-  ngOnInit() {
-  }
+  value;
+
+  open = false;
 
   openModal(data) {
     this.open = true;
