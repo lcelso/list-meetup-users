@@ -1,12 +1,11 @@
-<div *ngFor="let item of data" class="thumb">
+<div *ngFor="let item of data" class="thumb" (click)="openModal(item)">
   <p>Nome: {{item.name}}</p>
-  <img src="{{ item.photo.photo_link }}" class="picture" alt="{{item.name}}" (click)="openModal(item)">
+  <img src="{{ item.photo.photo_link }}" class="picture" alt="{{item.name}}" />
 </div>
 
-<div *ngIf="modalIsOpen === true" class="modal" (click)="modalIsOpen = false">
-  <div class="windowModal">
-    <img src="{{ item.photo.photo_link }}" alt="{{ item.name }}">
-    <p>Nome: {{item.name}}</p>
-    <p>Cidade: {{item.city}}</p>
-  </div>
-</div>
+<app-modal
+  *ngIf="open === true"
+  [name]="value.name"
+  [city]="value.city"
+  [picture]="value.photo.photo_link"
+  (closeModalClick)="closeModal($event)"></app-modal>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit , AfterViewInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-list-meetup-users',
@@ -8,17 +8,23 @@ import { Component, Input, OnInit , AfterViewInit} from '@angular/core';
 export class ListMeetupUsersComponent implements OnInit {
 
   @Input() data;
-
-  modalIsOpen = false;
-
-  item;
+  value;
+  open = false;
 
   ngOnInit() {
   }
 
-  openModal(img) {
-    this.item = img;
-    this.modalIsOpen = true;
+  openModal(data) {
+    this.open = true;
+    this.value = data;
+  }
+
+  closeModal($event) {
+    if ($event.closeModal) {
+      this.open = false;
+    }
   }
 
 }
+
+
